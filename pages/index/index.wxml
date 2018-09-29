@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="">
+    金币数量:<input bindinput="changeName" type="number" placeholder='输入金币数量' />
+    种子数量：<text class="user-motto">{{zhognzi}}</text>
+  </view>
+  <view class="">
+    种子数量:<input bindinput="changeName2" type="number" placeholder='输入种子数量' />
+    金币数量：<text class="user-motto">{{jinbi}}</text>
+  </view>
+</view>
