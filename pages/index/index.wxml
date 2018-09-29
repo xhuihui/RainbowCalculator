@@ -1,15 +1,32 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
   <view class="">
-    金币数量:<input bindinput="changeName" type="number" placeholder='输入金币数量' />
-    种子数量：<text class="user-motto">{{zhognzi}}</text>
-  </view>
-  <view class="">
-    种子数量:<input bindinput="changeName2" type="number" placeholder='输入种子数量' />
-    金币数量：<text class="user-motto">{{jinbi}}</text>
+    <view class="h1">金币计算种子</view>
+    <view>
+      金币数量:
+      <input bindinput="changeName" type="number" placeholder='输入金币数量' />
+      <picker bindchange="bindPickerChange" value="{{jbdwIndex}}" de range="{{dw}}">
+        <view class="picker">
+          当前单位：{{dw[jbdwIndex]}}
+        </view>
+      </picker>
+      <view>
+        种子数量：
+        <text class="user-motto">{{zhognzi}}</text>
+      </view>
+    </view>
+    <view class="divLine"></view>
+    <view class="h1">种子反推金币</view>
+    <view class="">
+      种子数量:
+      <input bindinput="changeName2" type="number" placeholder='输入种子数量' />
+      <picker bindchange="zzbindPickerChange" value="{{zzdwIndex}}" de range="{{dw}}">
+        <view class="picker">
+          当前单位：{{dw[zzdwIndex]}}
+        </view>
+      </picker>
+      金币数量：
+      <text class="user-motto">{{jinbi}}</text>
+    </view>
   </view>
 </view>

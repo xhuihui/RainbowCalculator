@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "彩虹岛计算器",
   "pages":[
     "pages/index/index",
     "pages/logs/logs"
