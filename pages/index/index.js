@@ -40,7 +40,7 @@ Page({
       key: "zzdw",
       data: e.detail.value
     })
-    this.jb2zz();
+    this.zz2jb();
   },
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -67,8 +67,33 @@ Page({
     let dw = Math.pow(1000, this.data.jbdwIndex);
     let dz = 0.04 * Math.pow(jb * dw, 0.3787);
     let dzdw = this.jsdw(dz,0);
+
     this.setData({
       zhognzi: dzdw.value.toFixed(2)+""+dzdw.dw,
+    })
+    this.jb2zz300();
+    this.jb2zz1200();
+  },
+  //金币转换豆子
+  jb2zz300: function () {
+    let jb = this.data.jinbi*0.8*6*2;
+    let dw = Math.pow(1000, this.data.jbdwIndex);
+    let dz = 0.04 * Math.pow(jb * dw, 0.3787);
+    let dzdw = this.jsdw(dz, 0);
+
+    this.setData({
+      zhognzi300: dzdw.value.toFixed(2) + "" + dzdw.dw,
+    })
+  },
+  //金币转换豆子
+  jb2zz1200: function () {
+    let jb = this.data.jinbi * 0.8 * 6 * 2*7;
+    let dw = Math.pow(1000, this.data.jbdwIndex);
+    let dz = 0.04 * Math.pow(jb * dw, 0.3787);
+    let dzdw = this.jsdw(dz, 0);
+
+    this.setData({
+      zhognzi1200: dzdw.value.toFixed(2) + "" + dzdw.dw,
     })
   },
   

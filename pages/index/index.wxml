@@ -4,7 +4,7 @@
     <view class="h1">金币计算种子</view>
     <view>
       金币数量:
-      <input bindinput="changeName" type="number" placeholder='输入金币数量' />
+      <input bindinput="changeName" type="digit" placeholder='输入金币数量' />
       <picker bindchange="bindPickerChange" value="{{jbdwIndex}}" de range="{{dw}}">
         <view class="picker">
           当前单位：{{dw[jbdwIndex]}}
@@ -14,12 +14,18 @@
         种子数量：
         <text class="user-motto">{{zhognzi}}</text>
       </view>
+      <view>
+        金币=D5=> 300钻：
+        <text class="user-motto">{{zhognzi300}}</text>
+        1200钻：
+        <text class="user-motto">{{zhognzi1200}}</text>
+      </view>
     </view>
     <view class="divLine"></view>
     <view class="h1">种子反推金币</view>
     <view class="">
       种子数量:
-      <input bindinput="changeName2" type="number" placeholder='输入种子数量' />
+      <input bindinput="changeName2" type="digit" placeholder='输入种子数量' />
       <picker bindchange="zzbindPickerChange" value="{{zzdwIndex}}" de range="{{dw}}">
         <view class="picker">
           当前单位：{{dw[zzdwIndex]}}
