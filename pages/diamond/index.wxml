@@ -1,0 +1,46 @@
+<view class="page" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" >
+  <view class="moveFixed moveLeft">
+    <view class='arrowLeft'></view>
+  </view>
+  <view class="container">
+    <view class="">
+      <view class="h1">使用钻石计算器</view>
+      <view>
+        D5:
+        <input bindinput="changeD5" type="digit" placeholder='输入D5' />
+        <picker bindchange="bindPickerChangeD5" value="{{d5dwIndex}}" de range="{{dw}}">
+          <view class="picker">
+            D5单位：{{dw[d5dwIndex]}}
+          </view>
+        </picker>
+        车内种子数量:
+        <input bindinput="changeZZ" type="digit" placeholder='输入车内种子数量' />
+        <picker bindchange="bindPickerChangeZZ" value="{{zzdwIndex}}" de range="{{dw}}">
+          <view class="picker">
+            当前单位：{{dw[zzdwIndex]}}
+          </view>
+        </picker>
+
+        未收金币:
+        <input bindinput="changeJB" type="digit" placeholder='输入金币数量' />
+        <picker bindchange="bindPickerChange" value="{{jbdwIndex}}" de range="{{dw}}">
+          <view class="picker">
+            当前单位：{{dw[jbdwIndex]}}
+          </view>
+        </picker>
+        
+        <view>
+          种子数量：
+          <text class="user-motto">{{zhognzi}}</text>
+        </view>
+        <view>
+          金币=D5=> 300钻：
+          <text class="user-motto">{{zhognzi300}}</text> 1200钻：
+          <text class="user-motto">{{zhognzi1200}}</text>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+
+</view>

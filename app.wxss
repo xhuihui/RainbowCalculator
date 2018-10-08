@@ -1,15 +1,12 @@
 /**app.wxss**/
-.container {
+
+.page {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 100rpx 0;
-  box-sizing: border-box;
-} 
+  flex-direction: row;
+}
+
 page {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   height: 100%;
   font-size: 32rpx;
   line-height: 3;
@@ -18,7 +15,54 @@ page {
 .page-body {
   padding: 20rpx 0;
 }
-.h1{
-  font-weight:bold ;
+
+.h1 {
+  font-weight: bold;
   font-size: 18px;
+}
+
+.container {
+  height: 100%;
+  width: 95%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100rpx 0;
+  box-sizing: border-box;
+}
+
+.moveFixed {
+  position: fixed;
+  height: 100%;
+  width: 5%;
+}
+
+.moveRight { right: 0rpx;}
+.moveLeft { left:0rpx;}
+
+.arrowRight {
+  content: " ";
+  height: 30px;
+  width: 30px;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: rgb(173, 172, 172);
+  border-style: solid;
+  transform: rotate(45deg);
+  position: absolute;
+  margin-top: -4px;
+  top: 45%;
+  right: 10rpx;
+}
+.arrowLeft {
+  content: " ";
+  height: 30px;
+  width: 30px;
+  border-width: 0 0 2rpx 2rpx;
+  border-color: rgb(173, 172, 172);
+  border-style: solid;
+  transform: rotate(45deg);
+  position: absolute;
+  margin-top: -4px;
+  top: 45%;
+  left: 10rpx;
 }
